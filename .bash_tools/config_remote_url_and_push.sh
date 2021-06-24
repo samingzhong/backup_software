@@ -13,10 +13,15 @@ echo -e "shellDir:$shellDir\npwd:$(pwd)"
 
 git_root_path=$(pwd)/../
 
-gitlab_url=$(cat .remote_config|grep gitlab|sed -n '1p')
-github_url=$(cat .remote_config|grep github|sed -n '1p')
+show_local_config()
+{
+	gitlab_url=$(cat .remote_config|grep gitlab|sed -n '1p')
+	github_url=$(cat .remote_config|grep github|sed -n '1p')
 
-echo -e  "---------读取到本地配置:------------\ngitlab_url:$gitlab_url\ngithub_url:$github_url\n----------------------------\n"
+	echo -e  "---------读取到本地配置:------------\ngitlab_url:$gitlab_url\ngithub_url:$github_url\n----------------------------\n"	
+}
+
+
 
 
 config_remote_url_and_push()
@@ -57,8 +62,17 @@ config_remote_url_and_push()
 	fi
 }
 
-config_remote_url_and_push $remote_gitlab $gitlab_url
-config_remote_url_and_push $remote_github $github_url
+main()
+{
+	show_local_config
+	
+	config_remote_url_and_push $remote_gitlab $gitlab_url
+	config_remote_url_and_push $remote_github $github_url
+	
+	echo -e "====================== 执行git push 操作结束 ======================"
+	echo -e "====================== pwd:[$(pwd)] 脚本执行结束时间:$(date) ==========================\n\n"
+	echo "✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅"
 
-echo -e "====================== 执行git push 操作结束 ======================"
-echo -e "====================== pwd:[$(pwd)] 脚本执行结束时间:$(date) ==========================\n\n"
+}
+
+main	
