@@ -23,7 +23,7 @@ config_remote_url_and_push()
 {
 	remote_name=$1
 	remote_url=$2
-	echo -e "--------------尝试配置远程仓库[$remote_name]:$remote_url（如果git尚未配置$remote_name） ----------"
+	echo -e "--------------尝试配置远程仓库[$remote_name]:$remote_url (如果git尚未配置$remote_name) ----------"
 	if [[ $remote_url == "" ]]; then
 		echo -e "remote_url为空！！"
 	else
