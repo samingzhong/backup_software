@@ -22,7 +22,7 @@ show_branch_config()
 	# echo -e "-------------当前本地分支:$local_branch 跟踪的远程仓库为:$config_remote (for git fetch)"
 	# echo -e "-------------当前本地分支:$local_branch 合并的源分支为:$config_remote_branch (for git merge)"
 	# echo -e "-------------综上，当前git pull的配置，是从远程仓库:$config_remote 的分支:$config_remote_branch 合并内容到本地分支:$local_branch"
-	echo -e "-------------当前配置:[$local_branch]<․․․․․․․․․[$config_remote/$config_remote_branch]"
+	echo -e "⏬⏬⏬⏬⏬⏬⏬⏬⏬⏬⏬[$local_branch]<․․․․․․․․․[$config_remote/$config_remote_branch]⏬⏬⏬⏬⏬⏬⏬⏬⏬⏬⏬⏬"
 }
 
 

@@ -50,7 +50,7 @@ config_remote_url_and_push()
 			git commit -m ".";
 		fi
 		echo -e "--------------	同步到远程仓库/分支([$remote_name/master])..."
-		echo -e "[master]․․․․․․․․․>[$remote_name/master]"
+		echo -e "🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀[master]․․․․․․․․․>[$remote_name/master]🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀"
 		git push $remote_name master
 		echo -e '-----------------things done!!!---------------\n\n'
 		
