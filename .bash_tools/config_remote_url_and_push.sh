@@ -30,11 +30,11 @@ config_remote_url_and_push()
 		if [ -z "$(git config remote.${remote_name}.url)" ]; then
 			# 修改remote.origin.url
 			echo -e "--------------修改前 remote.[${remote_name}].url:$(git config remote.${remote_name}.url) ----------"
-			echo -e "未配置remote.${remote_name}.url"
+			echo -e "检测到未配置remote.${remote_name}.url"
 			git remote add $remote_name $remote_url
 			echo -e "--------------修改后 remote.[${remote_name}].url:$(git config remote.${remote_name}.url) ----------"
 		else
-			echo -e "--------------读取仓库配置 remote.[${remote_name}].url:$(git config remote.${remote_name}.url) ----------"
+			echo -e "--------------读取到仓库配置非空 remote.[${remote_name}].url:$(git config remote.${remote_name}.url) ----------"
 		fi
 
 		
