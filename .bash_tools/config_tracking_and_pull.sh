@@ -52,12 +52,13 @@ main()
 	echo -e "====================== 执行git pull操作 ======================"
 	echo -e "====================== pwd:[$(pwd)] 脚本执行开始时间:$(date) =========================="
 
+	echo -e "\n--------更新git pull前置:"
 	config_local_branch_tracking_remote_branch_before_git_pull $branch_local $remote_gitlab $branch_remote;git pull
-	echo -e "\n"
+	echo -e "\n--------更新git pull前置:"
 	config_local_branch_tracking_remote_branch_before_git_pull $branch_local $remote_github $branch_remote;git pull
-	echo -e "\n"
+	echo -e "\n--------还原配置为:"
 	config_local_branch_tracking_remote_branch_before_git_pull $branch_local $remote_gitlab $branch_remote
-	
+
 	echo -e "====================== 执行git pull 操作结束 ======================"
 	echo -e "====================== pwd:[$(pwd)] 脚本执行结束时间:$(date) ==========================\n\n"
 }
