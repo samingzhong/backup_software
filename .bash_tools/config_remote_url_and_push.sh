@@ -27,7 +27,7 @@ config_remote_url_and_push()
 	if [[ $remote_url == "" ]]; then
 		echo -e "remote_url为空！！"
 	else
-		if [[ $(git config remote.${remote_name}.url) == "" ]]; then
+		if [ -z "$(git config remote.${remote_name}.url)" ]; then
 			# 修改remote.origin.url
 			echo -e "--------------修改前 remote.[${remote_name}].url:$(git config remote.${remote_name}.url) ----------"
 			echo -e "未配置remote.${remote_name}.url"
@@ -40,7 +40,7 @@ config_remote_url_and_push()
 		
 
 		# git add;git commit;git push
-		if [[ $remote_name == "origin-github" ]]; then
+		if [[ $remote_name == $remote_github ]]; then
 			# 无需重复执行git add; git commit等操作
 			echo -e "无需重复执行git add; git commit等操作"
 		else
