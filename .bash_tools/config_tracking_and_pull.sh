@@ -49,8 +49,8 @@ config_local_branch_tracking_remote_branch_before_git_pull()
 main()
 {
 	# 每个项目需要单独配置此项 ./remote_config
-	echo -e "====================== 执行git pull操作 ======================"
-	echo -e "====================== pwd:🏠🏠🏠🏠🏠🏠🏠🏠🏠🏠[$(pwd)]🏠🏠🏠🏠🏠🏠🏠🏠🏠\n脚本执行开始时间:$(date '+%Y.%m.%d-%A') =========================="
+	echo -e "☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎ 执行git pull操作 ☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎"
+	echo -e "====================== pwd:🏠🏠🏠🏠🏠🏠🏠🏠🏠🏠[$(pwd)]🏠🏠🏠🏠🏠🏠🏠🏠🏠\n脚本执行开始时间:$(date '+%Y.%m.%d %H:%M:%S-%A') =========================="
 
 	echo -e "\n--------更新git pull前置..."
 	config_local_branch_tracking_remote_branch_before_git_pull $branch_local $remote_gitlab $branch_remote;git pull
@@ -59,8 +59,8 @@ main()
 	echo -e "\n--------还原配置..."
 	config_local_branch_tracking_remote_branch_before_git_pull $branch_local $remote_gitlab $branch_remote
 
-	echo -e "====================== 执行git pull 操作结束 ======================"
-	echo -e "====================== pwd:[$(pwd)] 脚本执行结束时间:$(date '+%Y.%m.%d-%A') =========================="
+	echo -e "☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎ 执行git pull 操作结束 ☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎"
+	echo -e "====================== pwd:[$(pwd)] 脚本执行结束时间:$(date '+%Y.%m.%d %H:%M:%S-%A') =========================="
 	echo -e "✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅\n\n"
 }
 
