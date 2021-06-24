@@ -31,8 +31,8 @@ config_local_branch_tracking_remote_branch_before_git_pull()
 	local_branch=$1
 	remote=$2
 	remote_branch=$3
-	echo -e "-------------------------- 修改前 --------------------------"
-	show_branch_config $local_branch
+	# echo -e "-------------------------- 修改前 --------------------------"
+	# show_branch_config $local_branch
 
 	if [ -z "$local_branch" -o -z "$remote" -o -z "$remote_branch" ]; then
 		echo -e "入参为空!!local_branch:($local_branch),remote:($remote),remote_branch:($remote_branch)"
