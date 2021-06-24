@@ -16,14 +16,14 @@ git_root_path=$(pwd)/../
 gitlab_url=$(cat .remote_config|grep gitlab|sed -n '1p')
 github_url=$(cat .remote_config|grep github|sed -n '1p')
 
-echo -e  "---------读取到本地配置:------------\ngitlab_url:$gitlab_url\ngithub_url:$github_url\n--------------\n"
+echo -e  "---------读取到本地配置:------------\ngitlab_url:$gitlab_url\ngithub_url:$github_url\n----------------------------\n"
 
 
 config_remote_url_and_push()
 {
 	remote_name=$1
 	remote_url=$2
-	echo -e "--------------配置远程仓库[$remote_name]:$remote_url ----------"
+	echo -e "--------------尝试配置远程仓库[$remote_name]:$remote_url（如果git尚未配置$remote_name） ----------"
 	if [[ $remote_url == "" ]]; then
 		echo -e "remote_url为空！！"
 	else
