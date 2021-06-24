@@ -1,7 +1,5 @@
 
 #!/bin/bash
-echo -e "====================== 执行git push 操作开始 ======================"
-echo -e "====================== pwd:[$(pwd)] 脚本执行开始时间:$(date) =========================="
 
 remote_gitlab=origin
 remote_github=origin-github
@@ -64,6 +62,9 @@ config_remote_url_and_push()
 
 main()
 {
+	echo -e "====================== 执行git push 操作开始 ======================"
+	echo -e "====================== pwd:🏠🏠🏠🏠🏠🏠🏠🏠🏠🏠[$(pwd)🏠🏠🏠🏠🏠🏠🏠🏠🏠] 脚本执行开始时间:$(date) =========================="
+	
 	show_local_config
 	
 	config_remote_url_and_push $remote_gitlab $gitlab_url
